@@ -31,6 +31,5 @@ public class GameModel {
 		this.result = result;
 	}
 	
-	
 
 }
