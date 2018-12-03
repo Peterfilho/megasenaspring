@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>Lotéricas Guarapuava</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" th:fragment="head1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" th:fragment="head2" />
+<link rel="icon" type="image/png" href="favicon.png" th:fragment="head3" />
+
+<!-- CSS -->
+<link rel="stylesheet" href="materialize/css/cssLayout.css" th:fragment="head4"></link>
+<link rel="stylesheet" href="materialize/css/materialize.css" th:fragment="head5"></link>
+<link rel="stylesheet" href="materialize/css/common.css" th:fragment="head6"></link>
+<link rel="stylesheet" href="materialize/css/template.css" th:fragment="head7"></link>
+<link rel="stylesheet" href="materialize/lib/font-awesome/css/font-awesome.min.css" th:fragment="head8"></link>
+
+
+<!--Import Google Icon Font-->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet" th:fragment="head9"></link>
+<link href='http://fonts.googleapis.com/css?family=Roboto:200,700'
+	rel='stylesheet' type='text/css' th:fragment="head10"></link>
+	
+</head>
+<body>
+	<header>
+		<div class="navbar-fixed" style="z-index: 999">
+			<nav>
+				<div class="nav-wrapper  light-blue darken-3">
+					<div class="container">
+						<a class="brand-logo" href="index.jsp"> <img class="utf-logo"
+							src="resources/img/quina.png"></img>
+						</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i
+							class="material-icons">menu</i></a>
+						<ul class="right hide-on-med-and-down">
+							<li><a href="index.jsp">Início</a></li>							
+							<c:if test="${isLoggedIn}">
+							<li><a href="logout">Logout</a></li>
+							</c:if>							
+							
+						</ul>
+						<ul class="side-nav white" id="mobile-demo">
+							<div class="row">
+								<div class="col s8 offset-s2">
+									<div class="center">
+										<img class="responsive-img utf-logo-nav"
+											src="resources/img/megasena.png" />
+									</div>
+								</div>
+							</div>
+
+							<li><a href="index.jsp">Início</a></li>							
+							<c:if test="${isLoggedIn}">
+							<li><a href="logout">Logout</a></li>
+							</c:if>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	
+	
+	<div th:insert="~{container :: body}"></div>
+	
+	
+	<!-- rodape-->
+	<footer class="page-footer l light-blue darken-3" th:fragment="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 center">
+					<a href="http://www.utfpr.edu.br/guarapuava"> <img
+						src="img/lotericaslogo.png" id="utfpr-footer"
+						class=" img-responsive" height="70px" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+			<center>
+				&#169; Copyright <span id="year"></span> - Todos os direitos
+				reservados
+			</center>
+			</div>
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+	<script src="resources/js/common.js"></script>
+</body>
+</html>
+	
