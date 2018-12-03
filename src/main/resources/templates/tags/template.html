@@ -23,37 +23,26 @@
 	
 </head>
 <body>
-	<header>
+	<header th:fragment="header">
 		<div class="navbar-fixed" style="z-index: 999">
 			<nav>
 				<div class="nav-wrapper  light-blue darken-3">
-					<div class="container">
-						<a class="brand-logo" href="index.jsp"> <img class="utf-logo"
-							src="resources/img/quina.png"></img>
-						</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i
-							class="material-icons">menu</i></a>
-						<ul class="right hide-on-med-and-down">
-							<li><a href="index.jsp">Início</a></li>							
-							<c:if test="${isLoggedIn}">
-							<li><a href="logout">Logout</a></li>
-							</c:if>							
+				<div class="container">
+				
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>	</li>
+        
+        <li>
+        	<div class="row">
+					<div class="col s8 offset-s2">
+						<div class="center">
+						<a href="#" class="brand-logo center">Lotéricas Guarapuava</a>
+						</div>
+					</div>
+				</div>
+        </li>
 							
-						</ul>
-						<ul class="side-nav white" id="mobile-demo">
-							<div class="row">
-								<div class="col s8 offset-s2">
-									<div class="center">
-										<img class="responsive-img utf-logo-nav"
-											src="resources/img/megasena.png" />
-									</div>
-								</div>
-							</div>
-
-							<li><a href="index.jsp">Início</a></li>							
-							<c:if test="${isLoggedIn}">
-							<li><a href="logout">Logout</a></li>
-							</c:if>
-						</ul>
+      </ul>
 					</div>
 				</div>
 			</nav>
