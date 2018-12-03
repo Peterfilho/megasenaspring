@@ -23,21 +23,41 @@
 	
 	<!-- CORPO DA PÁGINA -->
 	
-
-	
-	
 <div class="container">
 
-<h2>Esta página não existe!</h2>
-		<p>Verifique o endereço e tente novamente!</p>
-		<div class="row">
-			<div class="col s12 center">
-				<img class="img-responsive" src="resources/img/404-south-park.jpg">
-			</div>		
-		</div>		 
-		
-		
-			
+<h1>Resultados</h1>
+		<div class="row">				
+		<div class="card col s12">
+            <span class="card-title">Mega Sena</span>
+            <div class="card-content"> 
+            	<p>Apostados: </p>
+               	<ul>
+               		<c:forEach var="aposta" items="${gameBean.bet }" varStatus="status">
+               			${aposta} 
+               			<c:if test="${!status.last }">,</c:if>
+               		</c:forEach>
+               	</ul>
+               	
+               	<p>Sorteados: </p>
+               	<ul>
+               		<c:forEach var="sorteio" items="${gameBean.raffle }" varStatus="status">
+               			${sorteio}
+               			<c:if test="${!status.last }">,</c:if>
+               		</c:forEach>
+               	</ul>           
+                <h6>Resultado: ${gameBean.result}"</h6>                             
+            </div>                               
+        </div>
+        </div>
+        
+					
+			<p>
+				<button type="submit" class="waves-effect waves-light btn orange lighten-1">Tentar Novamente</button>
+			</p>
+
+
+
+</div>	
 	<!-- rodape-->
 	<footer class="page-footer l light-blue darken-3" th:fragment="footer">
 		<div class="container">
@@ -66,4 +86,3 @@
 </body>
 </html>
 	
-		

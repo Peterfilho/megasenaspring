@@ -6,6 +6,11 @@ public class GameModel {
 	private int[] raffle = {};
 	private String result;
 	
+	public GameModel(int[] bet, int[]raffle,  String result) {
+		setBet(bet);
+		setRaffle(raffle);
+		setResult(result);
+	}
 	
 	public int[] getBet() {
 		return bet;
