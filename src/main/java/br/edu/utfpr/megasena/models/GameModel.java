@@ -1,12 +1,14 @@
 package br.edu.utfpr.megasena.models;
 
+import java.util.TreeSet;
+
 public class GameModel {
 	
 	private int[] bet = {};
-	private int[] raffle = {};
+	private TreeSet<Integer> raffle;
 	private String result;
 	
-	public GameModel(int[] bet, int[]raffle,  String result) {
+	public GameModel(int[] bet, TreeSet <Integer> raffle,  String result) {
 		setBet(bet);
 		setRaffle(raffle);
 		setResult(result);
@@ -18,12 +20,15 @@ public class GameModel {
 	public void setBet(int[] bet) {
 		this.bet = bet;
 	}
-	public int[] getRaffle() {
+
+	public TreeSet<Integer> getRaffle() {
 		return raffle;
 	}
-	public void setRaffle(int[] raffle) {
+
+	public void setRaffle(TreeSet<Integer> raffle) {
 		this.raffle = raffle;
 	}
+
 	public String getResult() {
 		return result;
 	}
