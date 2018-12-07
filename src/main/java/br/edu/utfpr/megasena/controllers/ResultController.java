@@ -16,24 +16,16 @@ import br.edu.utfpr.megasena.util.Sort;
 public class ResultController {
 	
 	
-	private Sort sort = new Sort();
 
 	@RequestMapping("/resultado")
 	public ModelAndView game() {
 
 		ModelAndView mv = new ModelAndView("view/result");
-
+		
+		
 		return mv;
 	}
 	
-	@RequestMapping(value = "/result", method = RequestMethod.POST)
-	public String sortear(@PathVariable("numeros") TreeSet <Integer> resultSet, GameModel gameModel) {
-		
-		sort.sort(gameModel);
-		gameModel.getRaffle();
-		
-		
-		return "redirect:/result";
-	}
+
 	
 }
