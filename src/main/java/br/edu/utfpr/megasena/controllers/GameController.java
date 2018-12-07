@@ -23,15 +23,16 @@ public class GameController {
 	public ModelAndView game() {
 
 		ModelAndView mv = new ModelAndView("view/game");
-
+		
+		mv.addObject(new GameModel ());
+		
 		return mv;
 	}
 	
 	@RequestMapping(value = "/result", method = RequestMethod.POST)
-	public String sortear(@PathVariable("numbers") TreeSet <Integer> resultSet, GameModel gameModel) {
+	public String sortear(@PathVariable("gameModel") TreeSet <Integer> resultSet, GameModel gameModel) {
 		
-		
-		
+		System.out.println(gameModel);
 		sort.sort(gameModel);
 		gameModel.getRaffle();
 		

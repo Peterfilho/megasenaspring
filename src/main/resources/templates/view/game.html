@@ -31,34 +31,34 @@
 	</p>
 	
 		<h4>Escolha seus Números</h4>
-		<form method="POST" th:object="${numbers}" th:action="@{/jogar}" >
+		<form method="POST" th:object="${gameModel}" th:action="@{/jogar}" >
 		<div class="container">
 		
 		<div class="row">
 				<div class="input-field col l4">
-					<input id="first" type="text" name="first" />
+					<input id="first" type="number" name="first" th:field="*{first}" />
 					<label for="first" class="active">Primeiro Número</label>
 				</div>
 				<div class="input-field col l4">
-					<input id="second" type="text" name="second" />
+					<input id="second" type="number" name="second" th:field="*{second}" />
 					<label for="second" class="active">Segundo Número</label>
 				</div>
 				<div class="input-field col l4">
-					<input id="third" type="text" name="third" />
+					<input id="third" type="number" name="third" th:field="*{third}" />
 					<label for="third" class="active">Terceiro Número</label>
 				</div>
 		</div>
 		<div class="row">		
 				<div class="input-field col l4">
-					<input id="fourth" type="text" name="fourth" />
+					<input id="fourth" type="number" name="fourth" th:field="*{fourth}" />
 					<label for="fourth" class="active">Quarto Número</label>
 				</div>		
 				<div class="input-field col l4">
-					<input id="fifth" type="text" name="fifth" />
+					<input id="fifth" type="number" name="fifth" th:field="*{fifth}" />
 					<label for="fifth" class="active">Quinto Número</label>
 				</div>
 				<div class="input-field col l4">
-					<input id="sixth" type="text" name="sixth" />
+					<input id="sixth" type="number" name="sixth" th:field="*{sixth}" />
 					<label for="sixth" class="active">Sexto Número</label>
 				</div>
 		</div>
