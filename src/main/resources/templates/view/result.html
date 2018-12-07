@@ -32,6 +32,8 @@
             <div class="card-content"> 
             	<p>Apostados: </p>
                	<ul>
+               		
+               	
                		<c:forEach var="aposta" items="${gameBean.bet }" varStatus="status">
                			${aposta} 
                			<c:if test="${!status.last }">,</c:if>
@@ -40,10 +42,13 @@
                	
                	<p>Sorteados: </p>
                	<ul>
-               		<c:forEach var="sorteio" items="${gameBean.raffle }" varStatus="status">
-               			${sorteio}
-               			<c:if test="${!status.last }">,</c:if>
-               		</c:forEach>
+               	
+               	
+               		<dl th:each="sorteio : ${status}">
+               	
+               		
+               			<th:if test="${!status.last }">,</th:if>
+               		</dl>
                	</ul>           
                 <h6>Resultado: ${gameBean.result}"</h6>                             
             </div>                               

@@ -32,14 +32,6 @@ public class Sort {
 		
 		return gameModel;
 	}
-	
-//
-//	gameBean.setBet(apostaOrdenada);
-//
-//	request.setAttribute("gameBean", gameBean);			
-//
-//	request.getRequestDispatcher("/WEB-INF/view/result.jsp").forward(request, response);
-//
 
 }
 

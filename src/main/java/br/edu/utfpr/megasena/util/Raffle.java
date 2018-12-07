@@ -5,8 +5,6 @@ public class Raffle {
 	
 
 	
-	//public GameModel aposta (TreeSet<Integer> aposta) {
-		
 		
 		
 		
